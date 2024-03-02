@@ -12,6 +12,9 @@ public class Sportka {
 
     public Sportka() {
         //TODO naplnit osudí čísly 1 až 49.
+        for (int i = 1; i <= 49; i++) {
+            osudi.add(i);
+        }
     }
 
     /**
@@ -20,7 +23,7 @@ public class Sportka {
      * @see Collections#shuffle(List)
      */
     public void zamichej() {
-        //TODO zamíchat osudí
+        Collections.shuffle(osudi);
     }
 
     /**
@@ -30,8 +33,12 @@ public class Sportka {
      * @see List#subList(int, int)
      */
     public List<Integer> dejVylosovanaCisla() {
+        List<Integer> vylosovanaCisla = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            vylosovanaCisla.add(osudi.get(i));
+        }
+        return vylosovanaCisla;
         //TODO Vrátit seznam prvních 6 čísel z osudí.
-        return null;
     }
 
     /**
@@ -41,6 +48,6 @@ public class Sportka {
      */
     public Integer dejDodatkoveCislo() {
         //TODO Vrátit sedmé číslo z osudí.
-        return null;
+        return osudi.get(6);
     }
 }
