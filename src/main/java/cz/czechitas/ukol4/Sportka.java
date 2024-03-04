@@ -33,11 +33,7 @@ public class Sportka {
      */
 
     public List<Integer> dejVylosovanaCisla() {
-        List<Integer> vylosovanaCisla = new ArrayList<>();
-        for (int i = 0; i < 6; i++) {
-            vylosovanaCisla.add(osudi.get(i));
-        }
-        return vylosovanaCisla;
+        return osudi.subList(0,6);
     }
 
     /**
